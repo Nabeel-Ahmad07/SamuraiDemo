@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Menu | Samurai Pan-Asian Restaurant, I-8 Markaz Islamabad</title>
+  <meta name="description" content="Browse the Samurai menu. Pan-Asian restaurant at 1st Floor, Vista Plaza, I-8 Markaz, Islamabad.">
+  <meta name="theme-color" content="#050505">
+  <script>document.documentElement.classList.add('js');</script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Inter:wght@300;400;500;600&family=Noto+Serif+JP:wght@600&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5 + Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+  <style>
+    /* =====================================================
+       SHARED STYLES (identical in index / menu / contact)
+       ===================================================== */
+    :root{
+      --black:#050505; --ink:#0a0a0a; --panel:#111111; --panel-2:#161616;
+      --red:#a00000; --red-hot:#c00000; --red-deep:#8b0000;
+      --text:#e8e4de; --muted:#9b958d; --line:rgba(255,255,255,.09);
+      --display:'Cinzel',Georgia,serif;
+      --body:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif;
+      --ease:cubic-bezier(.2,.7,.2,1);
+      --seigaiha:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='28' viewBox='0 0 56 28'%3E%3Cg fill='none' stroke='white' stroke-opacity='.06'%3E%3Ccircle cx='28' cy='28' r='26'/%3E%3Ccircle cx='28' cy='28' r='18'/%3E%3Ccircle cx='28' cy='28' r='10'/%3E%3Ccircle cx='0' cy='14' r='26'/%3E%3Ccircle cx='0' cy='14' r='18'/%3E%3Ccircle cx='0' cy='14' r='10'/%3E%3Ccircle cx='56' cy='14' r='26'/%3E%3Ccircle cx='56' cy='14' r='18'/%3E%3Ccircle cx='56' cy='14' r='10'/%3E%3C/g%3E%3C/svg%3E");
+    }
+    html{scroll-behavior:smooth}
+    body{background:var(--black);color:var(--text);font-family:var(--body);line-height:1.7;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+    h1,h2,h3,h4,h5{font-family:var(--display);color:#fff;letter-spacing:.04em}
+    a{color:inherit}
+    img{max-width:100%}
+    ::selection{background:var(--red);color:#fff}
+    :focus-visible{outline:2px solid var(--red-hot);outline-offset:3px}
+    .skip-link{position:absolute;left:-999px;top:0;background:var(--red);color:#fff;padding:.6rem 1rem;z-index:2000}
+    .skip-link:focus{left:0}
+
+    /* ---------- Navbar ---------- */
+    .navbar{padding:1rem 0;transition:background .4s,padding .4s,box-shadow .4s;background:linear-gradient(180deg,rgba(5,5,5,.85),rgba(5,5,5,0))}
+    .navbar.scrolled{background:rgba(5,5,5,.92);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);padding:.55rem 0;box-shadow:0 1px 0 rgba(160,0,0,.45)}
+    .navbar-brand{display:flex;align-items:center;gap:.7rem;font-family:var(--display);font-weight:700;letter-spacing:.32em;color:#fff;margin:0}
+    .navbar-brand:hover{color:#fff}
+    .brand-mark{width:34px;height:34px;display:grid;place-items:center;background:var(--red);font-family:'Noto Serif JP',serif;font-size:1.05rem;letter-spacing:0;color:#fff;border-radius:3px;box-shadow:0 0 18px rgba(192,0,0,.5)}
+    .navbar-toggler{border:1px solid rgba(160,0,0,.7);padding:.4rem .6rem}
+    .navbar-toggler:focus{box-shadow:0 0 0 .2rem rgba(160,0,0,.4)}
+    .navbar .nav-link{position:relative;font-size:.82rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.72);padding:.6rem 1.1rem;transition:color .3s}
+    .navbar .nav-link::after{content:'';position:absolute;left:1.1rem;right:1.1rem;bottom:.2rem;height:2px;background:var(--red-hot);transform:scaleX(0);transform-origin:left;transition:transform .4s var(--ease);box-shadow:0 0 10px rgba(192,0,0,.8)}
+    .navbar .nav-link:hover,.navbar .nav-link.active{color:#fff}
+    .navbar .nav-link:hover::after,.navbar .nav-link.active::after{transform:scaleX(1)}
+    @media(max-width:991.98px){
+      .navbar-collapse{background:rgba(8,8,8,.97);margin-top:.75rem;padding:.5rem 1rem 1rem;border:1px solid rgba(160,0,0,.35);border-radius:4px}
+      .navbar .nav-link{padding:.8rem 0}
+      .navbar .nav-link::after{left:0;right:auto;width:36px;bottom:.45rem}
+    }
+
+    /* ---------- Buttons ---------- */
+    .btn-samurai,.btn-ghost{display:inline-flex;align-items:center;justify-content:center;gap:.6rem;font-size:.8rem;font-weight:500;letter-spacing:.16em;text-transform:uppercase;padding:.95rem 2rem;border-radius:2px;text-decoration:none;transition:all .3s var(--ease)}
+    .btn-samurai{background:var(--red);border:1px solid var(--red-hot);color:#fff}
+    .btn-samurai:hover{background:var(--red-hot);color:#fff;transform:translateY(-2px);box-shadow:0 0 28px rgba(192,0,0,.55)}
+    .btn-ghost{background:transparent;border:1px solid rgba(255,255,255,.3);color:#fff}
+    .btn-ghost:hover{border-color:var(--red-hot);background:rgba(160,0,0,.16);color:#fff;transform:translateY(-2px)}
+
+    /* ---------- Section helpers ---------- */
+    .section{padding:clamp(4rem,9vw,7rem) 0;position:relative}
+    .eyebrow{font-size:.75rem;letter-spacing:.34em;text-transform:uppercase;color:var(--red-hot);font-weight:600;margin-bottom:.8rem;display:block}
+    .section-title{font-size:clamp(1.8rem,4.6vw,3rem);font-weight:700;line-height:1.2;margin-bottom:1rem}
+    .rule{display:flex;align-items:center;gap:.6rem;margin:0 0 1.5rem}
+    .rule i{width:7px;height:7px;background:var(--red-hot);transform:rotate(45deg);box-shadow:0 0 10px rgba(192,0,0,.8)}
+    .rule::after{content:'';width:64px;height:1px;background:linear-gradient(90deg,var(--red-hot),transparent)}
+    .text-center .rule{justify-content:center}
+    .text-center .rule::before{content:'';width:64px;height:1px;background:linear-gradient(270deg,var(--red-hot),transparent)}
+    .lead-muted{color:var(--muted);font-size:1.05rem}
+
+    /* ---------- Scroll reveal ---------- */
+    .js .reveal{opacity:0;transform:translateY(28px);transition:opacity .6s var(--ease),transform .6s var(--ease);transition-delay:var(--d,0s)}
+    .js .reveal.in{opacity:1;transform:none}
+
+    /* ---------- Footer ---------- */
+    .site-footer{position:relative;background:#030303;border-top:1px solid rgba(160,0,0,.4);padding:4.5rem 0 5.5rem;overflow:hidden}
+    .site-footer::before{content:'';position:absolute;inset:0;background:var(--seigaiha);-webkit-mask-image:linear-gradient(180deg,#000,transparent 70%);mask-image:linear-gradient(180deg,#000,transparent 70%);pointer-events:none}
+    .site-footer .container{position:relative}
+    .f-title{font-family:var(--display);font-size:.8rem;letter-spacing:.25em;text-transform:uppercase;color:#fff;margin-bottom:1.1rem}
+    .f-link{color:var(--muted);text-decoration:none;transition:color .3s}
+    .f-link:hover{color:#fff}
+    .site-footer ul{list-style:none;padding:0;margin:0}
+    .site-footer li{margin-bottom:.45rem}
+    .site-footer p{color:var(--muted);margin-bottom:.4rem}
+    .footer-bottom{border-top:1px solid var(--line);margin-top:3rem;padding-top:1.4rem;color:var(--muted);font-size:.85rem}
+
+    /* ---------- Floating WhatsApp button ---------- */
+    .wa-float{position:fixed;right:max(16px,env(safe-area-inset-right));bottom:max(16px,env(safe-area-inset-bottom));z-index:1040;width:58px;height:58px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(145deg,#2fe477,#1aa64f);color:#fff;font-size:1.9rem;text-decoration:none;box-shadow:0 8px 24px rgba(0,0,0,.55),0 0 0 1px rgba(255,255,255,.12);transition:transform .3s var(--ease),box-shadow .3s}
+    .wa-float::before{content:'';position:absolute;inset:0;border-radius:50%;border:2px solid rgba(37,211,102,.7);animation:waPulse 2.4s ease-out infinite;pointer-events:none}
+    .wa-float:hover{transform:scale(1.08) translateY(-2px);color:#fff;box-shadow:0 10px 30px rgba(37,211,102,.45)}
+    .wa-label{position:absolute;right:72px;white-space:nowrap;background:rgba(10,10,10,.95);border:1px solid rgba(160,0,0,.5);color:#fff;font-size:.78rem;letter-spacing:.08em;padding:.45rem .8rem;border-radius:2px;opacity:0;transform:translateX(8px);pointer-events:none;transition:all .3s}
+    @media(hover:hover){.wa-float:hover .wa-label,.wa-float:focus-visible .wa-label{opacity:1;transform:none}}
+    @keyframes waPulse{0%{transform:scale(1);opacity:.9}100%{transform:scale(1.7);opacity:0}}
+
+    /* =====================================================
+       MENU PAGE STYLES
+       ===================================================== */
+    .page-hero{position:relative;padding:9.5rem 0 4rem;text-align:center;overflow:hidden;isolation:isolate;background:radial-gradient(ellipse 60% 90% at 50% 0%,rgba(139,0,0,.35),transparent 70%),linear-gradient(180deg,#0a0a0a,#050505)}
+    .page-hero::before{content:'';position:absolute;inset:0;z-index:-1;background:var(--seigaiha);-webkit-mask-image:linear-gradient(180deg,#000,transparent);mask-image:linear-gradient(180deg,#000,transparent)}
+    .page-hero::after{content:'';position:absolute;left:0;right:0;bottom:0;height:1px;background:linear-gradient(90deg,transparent,var(--red-hot),transparent);box-shadow:0 0 18px rgba(192,0,0,.7)}
+    .page-hero h1{font-size:clamp(2.4rem,8vw,4.8rem);font-weight:800;letter-spacing:.12em;text-transform:uppercase;margin-bottom:.6rem}
+    .page-hero p{color:var(--muted);max-width:560px;margin:0 auto}
+
+    /* Placeholder notice (remove once real menu data is added) */
+    .demo-note{display:flex;gap:.9rem;align-items:flex-start;border:1px dashed rgba(192,0,0,.6);background:rgba(139,0,0,.1);padding:1rem 1.2rem;color:#d9cfc8;font-size:.92rem}
+    .demo-note i{color:var(--red-hot);font-size:1.2rem;margin-top:.1rem}
+
+    /* Filter bar */
+    .filter-bar{position:sticky;top:56px;z-index:20;background:rgba(5,5,5,.92);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);padding:.9rem 0}
+    .filter-scroll{display:flex;gap:.6rem;overflow-x:auto;padding:.2rem 1px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+    .filter-scroll::-webkit-scrollbar{display:none}
+    @media(min-width:768px){.filter-scroll{justify-content:center;flex-wrap:wrap}}
+    .filter-btn{flex:0 0 auto;background:transparent;color:rgba(255,255,255,.75);border:1px solid rgba(255,255,255,.18);padding:.6rem 1.3rem;font-size:.76rem;letter-spacing:.16em;text-transform:uppercase;border-radius:2px;transition:all .3s var(--ease)}
+    .filter-btn:hover{border-color:var(--red-hot);color:#fff}
+    .filter-btn[aria-pressed="true"]{background:var(--red);border-color:var(--red-hot);color:#fff;box-shadow:0 0 20px rgba(192,0,0,.4)}
+    .result-count{color:var(--muted);font-size:.85rem;letter-spacing:.08em}
+
+    /* Dish cards */
+    .dish{height:100%;display:flex;flex-direction:column;background:linear-gradient(170deg,#141414,#0b0b0b);border:1px solid var(--line);overflow:hidden;transition:transform .35s var(--ease),opacity .3s,border-color .4s,box-shadow .4s}
+    .dish:hover{transform:translateY(-6px);border-color:rgba(160,0,0,.6);box-shadow:0 18px 38px rgba(0,0,0,.6),0 0 26px rgba(160,0,0,.16)}
+    .dish.is-out{opacity:0;transform:scale(.96)}
+    .dish-media{position:relative;aspect-ratio:4/3;overflow:hidden;background:#0d0d0d}
+    .dish-media img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s var(--ease)}
+    .dish:hover .dish-media img{transform:scale(1.08)}
+    .dish-ph{width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.4rem;color:rgba(255,255,255,.35);font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;background:radial-gradient(circle at 70% 20%,rgba(160,0,0,.28),transparent 60%),var(--seigaiha),#0d0d0d}
+    .dish-ph i{font-size:1.8rem;color:rgba(192,0,0,.7)}
+    .dish-body{padding:1.3rem 1.4rem 1.5rem;display:flex;flex-direction:column;flex:1}
+    .dish-top{display:flex;justify-content:space-between;align-items:center;gap:.5rem;margin-bottom:.6rem}
+    .dish-cat{font-size:.68rem;letter-spacing:.22em;text-transform:uppercase;color:var(--red-hot);font-weight:600}
+    .badge-ph{font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;border:1px dashed rgba(255,255,255,.3);color:var(--muted);padding:.1rem .5rem;border-radius:2px}
+    .dish h3{font-size:1.1rem;font-weight:700;margin-bottom:.4rem}
+    .dish p{color:var(--muted);font-size:.9rem;margin-bottom:1rem}
+    .dish-price{margin-top:auto;font-family:var(--display);font-weight:700;color:#fff;font-size:1.05rem;padding-top:.9rem;border-top:1px solid var(--line)}
+
+    /* CTA band */
+    .cta-band{border:1px solid rgba(160,0,0,.4);border-left:3px solid var(--red-hot);background:linear-gradient(135deg,rgba(139,0,0,.2),rgba(10,10,10,.9) 60%);padding:clamp(1.6rem,5vw,3rem)}
+
+    @media(max-width:575.98px){
+      .navbar-brand{letter-spacing:.24em}
+      .cta-band .btn-samurai,.cta-band .btn-ghost{flex:1 1 100%}
+    }
+
+    /* ---------- Reduced motion ---------- */
+    @media (prefers-reduced-motion:reduce){
+      html{scroll-behavior:auto}
+      *,*::before,*::after{animation:none!important;transition:none!important}
+      .js .reveal{opacity:1;transform:none}
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ================= NAVBAR ================= -->
+  <nav class="navbar navbar-expand-lg fixed-top" data-bs-theme="dark" aria-label="Main navigation">
+    <div class="container">
+      <a class="navbar-brand" href="index.html" aria-label="Samurai home"><span class="brand-mark" aria-hidden="true">侍</span>SAMURAI</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="mainNav">
+        <ul class="navbar-nav align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="menu.html">Menu</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main id="main">
+
+    <!-- ================= PAGE HEADER ================= -->
+    <header class="page-hero">
+      <div class="container">
+        <span class="eyebrow">Samurai &bull; Pan-Asian Cuisine</span>
+        <h1>The Menu</h1>
+        <p>Browse by category. Pan-Asian &amp; Chinese dining at I-8 Markaz, Islamabad.</p>
+      </div>
+    </header>
+
+    <!-- ================= FILTERS ================= -->
+    <div class="filter-bar">
+      <div class="container">
+        <div class="filter-scroll" role="group" aria-label="Filter menu by category">
+          <button type="button" class="filter-btn" data-filter="all" aria-pressed="true">All</button>
+          <button type="button" class="filter-btn" data-filter="starters" aria-pressed="false">Starters</button>
+          <button type="button" class="filter-btn" data-filter="chinese" aria-pressed="false">Chinese</button>
+          <button type="button" class="filter-btn" data-filter="main" aria-pressed="false">Main Course</button>
+          <button type="button" class="filter-btn" data-filter="panasian" aria-pressed="false">Pan-Asian</button>
+          <button type="button" class="filter-btn" data-filter="drinks" aria-pressed="false">Drinks</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ================= MENU GRID ================= -->
+    <section class="section pt-5" aria-label="Menu items">
+      <div class="container">
+        <!-- DEMO NOTICE: delete this block once the real menu is entered -->
+        <div class="demo-note mb-4 reveal">
+          <i class="bi bi-info-circle" aria-hidden="true"></i>
+          <div><strong class="text-white">Demo layout.</strong> The item names, descriptions and prices below are placeholders. Samurai's real dishes, prices and photos will be added to the <code>MENU</code> list in this page's script.</div>
+        </div>
+        <p class="result-count" id="resultCount" aria-live="polite"></p>
+        <div class="row g-4" id="menuGrid"></div>
+        <noscript><p class="text-secondary">Please enable JavaScript to view the menu.</p></noscript>
+      </div>
+    </section>
+
+    <!-- ================= CTA ================= -->
+    <section class="pb-5">
+      <div class="container">
+        <div class="cta-band reveal">
+          <div class="row align-items-center g-4">
+            <div class="col-lg-7">
+              <h2 class="h3 mb-2">Questions about the menu?</h2>
+              <p class="text-secondary mb-0">Call us on +92 51 8740701 or send a WhatsApp message. Open daily 11:30 AM – 11:00 PM.</p>
+            </div>
+            <div class="col-lg-5 d-flex flex-wrap gap-3 justify-content-lg-end">
+              <a class="btn-samurai" href="tel:+92518740701"><i class="bi bi-telephone"></i> Call</a>
+              <a class="btn-ghost" href="contact.html">Contact Us</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4">
+          <a class="navbar-brand mb-3" href="index.html"><span class="brand-mark" aria-hidden="true">侍</span>SAMURAI</a>
+          <p>Pan-Asian Restaurant<br>I-8 Markaz, Islamabad</p>
+          <!-- Social icons: add here once Samurai's real account links are available -->
+        </div>
+        <div class="col-6 col-lg-2">
+          <h2 class="f-title">Navigate</h2>
+          <ul><li><a class="f-link" href="index.html">Home</a></li><li><a class="f-link" href="menu.html">Menu</a></li><li><a class="f-link" href="contact.html">Contact</a></li></ul>
+        </div>
+        <div class="col-6 col-lg-3">
+          <h2 class="f-title">Contact</h2>
+          <p><a class="f-link" href="tel:+92518740701">+92 51 8740701</a></p>
+          <p>1st Floor, Vista Plaza,<br>I-8 Markaz, Islamabad</p>
+        </div>
+        <div class="col-lg-3">
+          <h2 class="f-title">Opening Hours</h2>
+          <p>11:30 AM – 11:00 PM Daily</p>
+        </div>
+      </div>
+      <div class="footer-bottom text-center text-md-start">© 2026 Samurai. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <!-- ================= WHATSAPP FLOATING BUTTON ================= -->
+  <a class="wa-float" href="https://wa.me/92518740701?text=Hi%20Samurai%2C%20I%20would%20like%20to%20make%20an%20inquiry." target="_blank" rel="noopener" aria-label="Chat with Samurai on WhatsApp">
+    <i class="bi bi-whatsapp" aria-hidden="true"></i><span class="wa-label">Chat on WhatsApp</span>
+  </a>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    /* =====================================================
+       MENU DATA — EDIT HERE
+       -----------------------------------------------------
+       Replace each placeholder entry with a real dish:
+         cat:   starters | chinese | main | panasian | drinks
+         name:  dish name
+         desc:  short description
+         price: number or text, e.g. 850  (leave '' to show "Rs. —")
+         img:   photo URL (leave '' to show a "Photo coming soon" slot)
+         placeholder: set to false (or delete) for real items
+       ===================================================== */
+    var CATEGORIES=[
+      {id:'starters',label:'Starters'},{id:'chinese',label:'Chinese'},{id:'main',label:'Main Course'},
+      {id:'panasian',label:'Pan-Asian'},{id:'drinks',label:'Drinks'}
+    ];
+    var MENU=[
+      {cat:'starters',name:'Starter Item 01',desc:'Short description of this dish goes here.',price:'',img:'',placeholder:true},
+      {cat:'starters',name:'Starter Item 02',desc:'Short description of this dish goes here.',price:'',img:'',placeholder:true},
+      {cat:'starters',name:'Starter Item 03',desc:'Short description of this dish goes here.',price:'',img:'',placeholder:true},
+      {cat:'chinese',name:'Chinese Item 01',desc:'Short description of this dish goes here.',price:'',img:'',placeholder:true},
+      {cat:'chinese',name:'Chinese Item 02',desc:'Short description of this dish goes here.',price:'',img:'',placeholder:true},
+      {cat:'chinese',name:'Chinese Item 03',desc:'Short description of this dish goes here.',price:'',img:'',placeholder:true},
+      {cat:'main',name:'Main Course Item 01',desc:'Short description of this dish goes here.',price:'',img:'',placeholder:true},
+      {cat:'main',name:'Main Course Item 02',desc:'Short description of this dish goes here.',price:'',img:'',placeholder:true},
+      {cat:'main',name:'Main Course Item 03',desc:'Short description of this dish goes here.',price:'',img:'',placeholder:true},
+      {cat:'panasian',name:'Pan-Asian Item 01',desc:'Short description of this dish goes here.',price:'',img:'',placeholder:true},
+      {cat:'panasian',name:'Pan-Asian Item 02',desc:'Short description of this dish goes here.',price:'',img:'',placeholder:true},
+      {cat:'panasian',name:'Pan-Asian Item 03',desc:'Short description of this dish goes here.',price:'',img:'',placeholder:true},
+      {cat:'drinks',name:'Drink Item 01',desc:'Short description of this drink goes here.',price:'',img:'',placeholder:true},
+      {cat:'drinks',name:'Drink Item 02',desc:'Short description of this drink goes here.',price:'',img:'',placeholder:true},
+      {cat:'drinks',name:'Drink Item 03',desc:'Short description of this drink goes here.',price:'',img:'',placeholder:true}
+    ];
+
+    // ---- Build cards ----
+    (function(){
+      var grid=document.getElementById('menuGrid');
+      var count=document.getElementById('resultCount');
+      var buttons=document.querySelectorAll('.filter-btn');
+      function esc(s){return String(s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]});}
+      function labelOf(id){var c=CATEGORIES.filter(function(x){return x.id===id})[0];return c?c.label:id;}
+
+      grid.innerHTML=MENU.map(function(i,n){
+        var media=i.img
+          ? '<img src="'+esc(i.img)+'" alt="'+esc(i.name)+'" loading="lazy">'
+          : '<div class="dish-ph" role="img" aria-label="Photo placeholder for '+esc(i.name)+'"><i class="bi bi-camera"></i><span>Photo coming soon</span></div>';
+        var price=i.price!==''&&i.price!=null ? 'Rs. '+esc(i.price) : 'Rs. —';
+        return '<div class="col-12 col-sm-6 col-lg-4 reveal" data-cat="'+esc(i.cat)+'" style="--d:'+((n%3)*0.08)+'s">'
+          +'<article class="dish"><div class="dish-media">'+media+'</div>'
+          +'<div class="dish-body"><div class="dish-top"><span class="dish-cat">'+esc(labelOf(i.cat))+'</span>'
+          +(i.placeholder?'<span class="badge-ph">Placeholder</span>':'')+'</div>'
+          +'<h3>'+esc(i.name)+'</h3><p>'+esc(i.desc)+'</p><div class="dish-price">'+price+'</div></div></article></div>';
+      }).join('');
+
+      var cols=grid.querySelectorAll('[data-cat]');
+
+      function apply(cat){
+        var shown=0;
+        cols.forEach(function(col){
+          var card=col.firstElementChild;
+          var show=(cat==='all'||col.dataset.cat===cat);
+          if(show){
+            shown++;
+            col.classList.remove('d-none');
+            setTimeout(function(){card.classList.remove('is-out')},20);
+          }else{
+            card.classList.add('is-out');
+            setTimeout(function(){ if(card.classList.contains('is-out')) col.classList.add('d-none'); },300);
+          }
+        });
+        buttons.forEach(function(b){b.setAttribute('aria-pressed',b.dataset.filter===cat?'true':'false')});
+        count.textContent='Showing '+shown+' item'+(shown===1?'':'s')+(cat==='all'?'':' in '+labelOf(cat));
+      }
+
+      buttons.forEach(function(b){
+        b.addEventListener('click',function(){
+          apply(b.dataset.filter);
+          if(history.replaceState){history.replaceState(null,'',b.dataset.filter==='all'?location.pathname:'#'+b.dataset.filter);}
+        });
+      });
+
+      // Deep links like menu.html#chinese
+      var start=location.hash.replace('#','');
+      var valid=CATEGORIES.some(function(c){return c.id===start});
+      apply(valid?start:'all');
+    })();
+
+    // ---- Navbar background on scroll ----
+    (function(){
+      var nav=document.querySelector('.navbar');
+      function onScroll(){ nav.classList.toggle('scrolled',window.scrollY>40); }
+      onScroll(); window.addEventListener('scroll',onScroll,{passive:true});
+    })();
+
+    // ---- Fade-in on scroll ----
+    (function(){
+      var els=document.querySelectorAll('.reveal');
+      if(!('IntersectionObserver' in window)){ els.forEach(function(e){e.classList.add('in')}); return; }
+      var io=new IntersectionObserver(function(entries){
+        entries.forEach(function(en){ if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); } });
+      },{threshold:.1,rootMargin:'0px 0px -40px 0px'});
+      els.forEach(function(e){io.observe(e)});
+    })();
+  </script>
+</body>
+</html>
